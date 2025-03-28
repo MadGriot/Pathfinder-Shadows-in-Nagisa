@@ -10,22 +10,7 @@ Hierarchy:
         - ref!! 7b069b11-c829-41db-8689-9edcb26fa928
         - ref!! 982e19be-a60a-4019-a054-fb5f6b5408ba
         - ref!! c6f51e77-9fe5-4cbd-8a68-25ff38ad7f30
-        - ref!! 3bd7d9bb-19c0-4832-a871-69f8a54554ca
     Parts:
-        -   Entity:
-                Id: 3bd7d9bb-19c0-4832-a871-69f8a54554ca
-                Name: Sphere
-                Components:
-                    4390a7e06f4ed27772b9d7a7217c86a3: !TransformComponent
-                        Id: fe9eceed-1a44-41a1-a7a7-4b9e0b5aacb7
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1101433c5bfcce1de06328d9a634a759: !ModelComponent
-                        Id: edb0dcc5-1f10-4429-8b06-0c234bb3b4e4
-                        Model: b5ee6564-d5b8-43b1-bb2e-ee1efc1ed91e:Sphere
-                        Materials: {}
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light
@@ -57,8 +42,8 @@ Hierarchy:
                 Components:
                     3e5d3acd5cf89287ab67b47d5cf84cc4: !TransformComponent
                         Id: 6d78cbdb-b88c-4378-a4be-0bc263b11fcd
-                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
-                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Position: {X: 2.6, Y: 5.887974, Z: 0.9288603}
+                        Rotation: {X: -0.2839916, Y: 0.35742915, Z: 0.13813993, W: 0.87892556}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3de33cc671cb04b1c878bfbea05361c8: !CameraComponent
@@ -81,7 +66,7 @@ Hierarchy:
                 Components:
                     16c1b951c08b1741da5b2efc5ca57a83: !TransformComponent
                         Id: 3ab413f0-b389-436c-a5fb-1346875f244f
-                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Position: {X: 0.0, Y: 4.228342, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -100,9 +85,10 @@ Hierarchy:
                         Id: 9ef336d4-caef-438f-9eee-845e5a40df5a
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
                     8a63d42064783cf3fb42cdd04d3ed8c7: !ModelComponent
                         Id: fd14bdab-02ad-445b-85b0-eb9a2e3cb895
                         Model: 6526adfe-dbb6-4386-803e-7b65b59f8359:Ground
-                        Materials: {}
+                        Materials:
+                            35517009e227d0272b12f945e7943e58~0: ad74e5da-cb10-46b7-9c34-3d65a478df12:Materials/GridMTHazard
