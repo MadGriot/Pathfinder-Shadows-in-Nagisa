@@ -10,7 +10,25 @@ Hierarchy:
         - ref!! 7b069b11-c829-41db-8689-9edcb26fa928
         - ref!! 982e19be-a60a-4019-a054-fb5f6b5408ba
         - ref!! c6f51e77-9fe5-4cbd-8a68-25ff38ad7f30
+        - ref!! 63683419-9f20-419e-9f97-697e0d56d74a
     Parts:
+        -   Entity:
+                Id: 63683419-9f20-419e-9f97-697e0d56d74a
+                Name: Actor
+                Components:
+                    b05001a898b2ee5ab1bef78832978386: !TransformComponent
+                        Id: de1bd963-1dc1-4e16-8292-277268bc6cda
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9844591f21a26b82d3041fbf42b9fd49: !ModelComponent
+                        Id: 764d3078-0dad-4d6a-ace5-2970001bf743
+                        Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
+                        Materials: {}
+                    fdb19979632f46c91f1565205b716cd4: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
+                        Id: 2b69bda5-4df9-4b43-88bf-ea28efd06a1d
+                        actor: ref!! 63683419-9f20-419e-9f97-697e0d56d74a
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light
@@ -42,8 +60,8 @@ Hierarchy:
                 Components:
                     3e5d3acd5cf89287ab67b47d5cf84cc4: !TransformComponent
                         Id: 6d78cbdb-b88c-4378-a4be-0bc263b11fcd
-                        Position: {X: 2.6, Y: 5.887974, Z: 0.9288603}
-                        Rotation: {X: -0.2839916, Y: 0.35742915, Z: 0.13813993, W: 0.87892556}
+                        Position: {X: 2.6, Y: 5.887974, Z: -5.915843}
+                        Rotation: {X: 0.000121079385, Y: 0.9467511, Z: 0.3158067, W: 0.06267506}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3de33cc671cb04b1c878bfbea05361c8: !CameraComponent
@@ -92,3 +110,17 @@ Hierarchy:
                         Model: 6526adfe-dbb6-4386-803e-7b65b59f8359:Ground
                         Materials:
                             35517009e227d0272b12f945e7943e58~0: ad74e5da-cb10-46b7-9c34-3d65a478df12:Materials/GridMTHazard
+                    0e9993d0aa4ca8683db3947022e2d6c1: !StaticColliderComponent
+                        Id: f6635325-23c8-414e-9ade-301a9a5fca2a
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            2d13340a5ba11916750da5660f2e064c: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
