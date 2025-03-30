@@ -23,8 +23,15 @@ namespace PathfinderShadowsInNagisa
             {
                 Vector3 velocity = Vector3.Normalize(targetPosition - currentPosition);
                 float moveSpeed = 4f;
+                actor.Transform.Rotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
+
+
                 float deltaTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 actor.Transform.Position += velocity * moveSpeed * deltaTime;
+            }
+            else
+            {
+                actor.Get<AnimationController>().StopRunning();
             }
 
 
@@ -38,6 +45,7 @@ namespace PathfinderShadowsInNagisa
         {
             
             this.targetPosition = targetPosition;
+            actor.Get<AnimationController>().Run();
         }
     }
 }

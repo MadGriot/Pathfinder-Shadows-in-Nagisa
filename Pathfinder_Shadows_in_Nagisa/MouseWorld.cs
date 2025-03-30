@@ -17,6 +17,7 @@ namespace PathfinderShadowsInNagisa
 
         public override void Start()
         {
+     
             simulation = this.GetSimulation();
 
             Instance = this;

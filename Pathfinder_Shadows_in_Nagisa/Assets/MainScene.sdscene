@@ -30,6 +30,14 @@ Hierarchy:
                     fdb19979632f46c91f1565205b716cd4: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
                         Id: 2b69bda5-4df9-4b43-88bf-ea28efd06a1d
                         actor: ref!! 63683419-9f20-419e-9f97-697e0d56d74a
+                    0ca99d67f2fb06476e3783830f674146: !AnimationComponent
+                        Id: 9b93f741-0846-4a3c-8373-582d9d326cfe
+                        Animations:
+                            71ae444fc42f536224bcb28b9904f019~Idle: 5f286f7e-7d38-44cf-9bc1-3aad7be4f0fa:Animations/Idle
+                            e941453ecc98c136439dddf811340ecf~Run: 448ca260-c8b7-4f63-9bf6-e58a5970a830:Animations/Run
+                    197485875a863867ca9663b997f2f5d6: !PathfinderShadowsInNagisa.AnimationController,Pathfinder_Shadows_in_Nagisa
+                        Id: 2d5b8254-095a-4e54-a6e2-d14ff5c9cc1c
+                        AnimationSpeed: 1.0
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light
