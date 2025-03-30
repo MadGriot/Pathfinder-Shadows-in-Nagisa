@@ -10,13 +10,16 @@ namespace PathfinderShadowsInNagisa
     {
         // Declared public member fields and properties will show in the game studio
         Vector3 mousePosition;
-        internal CameraComponent camera;
+        public CameraComponent camera;
         private Simulation simulation;
+
+        public static MouseWorld Instance;
 
         public override void Start()
         {
-            camera = Entity.Get<CameraComponent>();
             simulation = this.GetSimulation();
+
+            Instance = this;
         }
 
         public override void Update()

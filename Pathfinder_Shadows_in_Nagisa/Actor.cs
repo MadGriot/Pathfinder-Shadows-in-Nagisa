@@ -28,9 +28,9 @@ namespace PathfinderShadowsInNagisa
             }
 
 
-            if (Input.Keyboard.IsKeyPressed(Keys.T))
+            if (Input.IsMouseButtonDown(MouseButton.Left))
             {
-                Move(new Vector3(4,0,4));
+                Move(MouseWorld.Instance.GetPosition());
             }
         }
 

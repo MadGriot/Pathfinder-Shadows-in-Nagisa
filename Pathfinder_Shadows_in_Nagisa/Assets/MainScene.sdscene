@@ -92,6 +92,7 @@ Hierarchy:
                         Children: {}
                     2b4bf11730d71ad748e1dcb690a5f5f8: !PathfinderShadowsInNagisa.MouseWorld,Pathfinder_Shadows_in_Nagisa
                         Id: 615b3fc7-0886-4494-b812-3344260b566a
+                        camera: ref!! 22a8419a-1141-45eb-99e3-81e97e4eb679
         -   Entity:
                 Id: 982e19be-a60a-4019-a054-fb5f6b5408ba
                 Name: Skybox
