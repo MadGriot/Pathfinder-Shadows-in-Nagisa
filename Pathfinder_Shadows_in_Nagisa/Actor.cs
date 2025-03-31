@@ -20,11 +20,13 @@ namespace PathfinderShadowsInNagisa
         {
             float stoppingDistance = .1f;
             currentPosition = actor.Transform.Position;
+
             if (Vector3.Distance(currentPosition, targetPosition) > stoppingDistance)
             {
                 Vector3 velocity = Vector3.Normalize(targetPosition - currentPosition);
                 float moveSpeed = 4f;
-                actor.Transform.Rotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
+                Quaternion targetRotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
+                actor.Transform.Rotation = Quaternion.Lerp(actor.Transform.Rotation, targetRotation, 1.0f);
 
 
                 actor.Get<CharacterComponent>().SetVelocity(velocity * moveSpeed);
