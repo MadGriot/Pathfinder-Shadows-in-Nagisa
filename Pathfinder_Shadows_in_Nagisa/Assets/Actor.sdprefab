@@ -1,0 +1,50 @@
+!PrefabAsset
+Id: efe2c04a-d98d-4828-bd86-2fbc37108f75
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
+    Parts:
+        -   Entity:
+                Id: af649d01-f0ff-47ad-a3b1-01b1665e8f60
+                Name: Actor
+                Components:
+                    590414277215fbb3426e18867db9846d: !TransformComponent
+                        Id: 7ff61e3f-e1de-4a60-843a-97960ec82a12
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
+                        Id: bffd953d-338f-4db1-a753-1e29c4abdf0b
+                        Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
+                        Materials: {}
+                    0c1ed70463ef53407c1bfe720056dbf2: !AnimationComponent
+                        Id: f7c02e91-146b-4ff4-b510-2964706334ae
+                        Animations:
+                            dad5cb5575d33732c8654f3f2bed1851~Idle: 5f286f7e-7d38-44cf-9bc1-3aad7be4f0fa:Animations/Idle
+                            7aae727075a1955f834453698c68fce4~Run: 448ca260-c8b7-4f63-9bf6-e58a5970a830:Animations/Run
+                    01a2d108d564d6b201d857804faa4a5b: !PathfinderShadowsInNagisa.AnimationController,Pathfinder_Shadows_in_Nagisa
+                        Id: f2f22c5d-2141-44d6-ad91-06e955f4cd74
+                        AnimationSpeed: 1.0
+                    cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
+                        Id: 09409238-9aa5-4df4-8d99-50169a4f9712
+                        actor: ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
+                    73105d8841d43718083454624ad77754: !CharacterComponent
+                        Id: 4ec1fe3e-7554-47e9-96e0-f3ce9ba13867
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            2b959940b7482671a70eccf65a82841f: !CapsuleColliderShapeDesc
+                                Length: 1.25
+                                LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

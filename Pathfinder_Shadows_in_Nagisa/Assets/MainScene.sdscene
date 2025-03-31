@@ -10,34 +10,25 @@ Hierarchy:
         - ref!! 7b069b11-c829-41db-8689-9edcb26fa928
         - ref!! 982e19be-a60a-4019-a054-fb5f6b5408ba
         - ref!! c6f51e77-9fe5-4cbd-8a68-25ff38ad7f30
-        - ref!! 63683419-9f20-419e-9f97-697e0d56d74a
         - ref!! 8c87cd4b-68a3-4978-a795-948f346c8b16
+        - ref!! 017adcc8-946f-4ec9-9ecd-d045106e4066
+        - ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
+        - ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
     Parts:
-        -   Entity:
-                Id: 63683419-9f20-419e-9f97-697e0d56d74a
-                Name: Actor
+        -   Folder: Code
+            Entity:
+                Id: 017adcc8-946f-4ec9-9ecd-d045106e4066
+                Name: ActorActionSystem
                 Components:
-                    b05001a898b2ee5ab1bef78832978386: !TransformComponent
-                        Id: de1bd963-1dc1-4e16-8292-277268bc6cda
+                    f8e09a6b86889b7ae45ea94c46fe7d2e: !TransformComponent
+                        Id: 3177f070-ee6d-4c26-bb0e-9c879bb648d4
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    9844591f21a26b82d3041fbf42b9fd49: !ModelComponent
-                        Id: 764d3078-0dad-4d6a-ace5-2970001bf743
-                        Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
-                        Materials: {}
-                    fdb19979632f46c91f1565205b716cd4: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
-                        Id: 2b69bda5-4df9-4b43-88bf-ea28efd06a1d
-                        actor: ref!! 63683419-9f20-419e-9f97-697e0d56d74a
-                    0ca99d67f2fb06476e3783830f674146: !AnimationComponent
-                        Id: 9b93f741-0846-4a3c-8373-582d9d326cfe
-                        Animations:
-                            71ae444fc42f536224bcb28b9904f019~Idle: 5f286f7e-7d38-44cf-9bc1-3aad7be4f0fa:Animations/Idle
-                            e941453ecc98c136439dddf811340ecf~Run: 448ca260-c8b7-4f63-9bf6-e58a5970a830:Animations/Run
-                    197485875a863867ca9663b997f2f5d6: !PathfinderShadowsInNagisa.AnimationController,Pathfinder_Shadows_in_Nagisa
-                        Id: 2d5b8254-095a-4e54-a6e2-d14ff5c9cc1c
-                        AnimationSpeed: 1.0
+                    1c193869c656f6c463cb54f7b4164d9f: !PathfinderShadowsInNagisa.ActorActionSystem,Pathfinder_Shadows_in_Nagisa
+                        Id: 682028b5-f471-4f96-b40a-d2e11bca9b31
+                        selectedActor: ref!! 8fbdbcea-97e8-4883-923d-63d990b579ca
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light
@@ -119,6 +110,52 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 8cc4d071-f0ea-4b48-8040-e4024258e61e:Skybox
         -   Entity:
+                Id: c3c23c93-f116-4296-87ab-29ebbbd0763c
+                Name: Actor
+                Components:
+                    590414277215fbb3426e18867db9846d: !TransformComponent
+                        Id: 4dd8ef55-b211-4972-8e74-1de393f23cc8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
+                        Id: 2012a43d-df3f-44ef-aa9c-f77256bf1051
+                        Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
+                        Materials: {}
+                    0c1ed70463ef53407c1bfe720056dbf2: !AnimationComponent
+                        Id: 23164713-a816-466c-9cba-84f7fb378651
+                        Animations:
+                            dad5cb5575d33732c8654f3f2bed1851~Idle: 5f286f7e-7d38-44cf-9bc1-3aad7be4f0fa:Animations/Idle
+                            7aae727075a1955f834453698c68fce4~Run: 448ca260-c8b7-4f63-9bf6-e58a5970a830:Animations/Run
+                    01a2d108d564d6b201d857804faa4a5b: !PathfinderShadowsInNagisa.AnimationController,Pathfinder_Shadows_in_Nagisa
+                        Id: 61ea9496-c9bf-4d96-ae67-07b9130ef65e
+                        AnimationSpeed: 1.0
+                    cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
+                        Id: 8fbdbcea-97e8-4883-923d-63d990b579ca
+                        actor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
+                    73105d8841d43718083454624ad77754: !CharacterComponent
+                        Id: 9d40b591-0aaf-4f5f-8cf5-9cc6ae495f85
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            2b959940b7482671a70eccf65a82841f: !CapsuleColliderShapeDesc
+                                Length: 1.25
+                                LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
+                BasePartId: af649d01-f0ff-47ad-a3b1-01b1665e8f60
+                InstanceId: 199e3301-f59b-433d-b021-6f1d50d77310
+        -   Entity:
                 Id: c6f51e77-9fe5-4cbd-8a68-25ff38ad7f30
                 Name: Ground
                 Components:
@@ -147,3 +184,49 @@ Hierarchy:
                             2d13340a5ba11916750da5660f2e064c: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
+        -   Entity:
+                Id: fe41f41c-76b6-4a81-9de5-743421fcabf0
+                Name: Actor
+                Components:
+                    590414277215fbb3426e18867db9846d: !TransformComponent
+                        Id: 8da91c9f-7b1b-460c-b3c3-65ef9683d36d
+                        Position*: {X: 4.0, Y: 0.0, Z: 4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
+                        Id: b3a0921e-4700-471a-9f3f-805e7466b181
+                        Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
+                        Materials: {}
+                    0c1ed70463ef53407c1bfe720056dbf2: !AnimationComponent
+                        Id: e31d2a03-a524-40dd-b994-4c650cfd886d
+                        Animations:
+                            dad5cb5575d33732c8654f3f2bed1851~Idle: 5f286f7e-7d38-44cf-9bc1-3aad7be4f0fa:Animations/Idle
+                            7aae727075a1955f834453698c68fce4~Run: 448ca260-c8b7-4f63-9bf6-e58a5970a830:Animations/Run
+                    01a2d108d564d6b201d857804faa4a5b: !PathfinderShadowsInNagisa.AnimationController,Pathfinder_Shadows_in_Nagisa
+                        Id: 78ad7015-37f1-49a9-aded-42c884384202
+                        AnimationSpeed: 1.0
+                    cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
+                        Id: c8781457-c170-4d9a-8131-e1bdeb007caf
+                        actor: ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
+                    73105d8841d43718083454624ad77754: !CharacterComponent
+                        Id: 1cf3054a-30e7-4e5c-9ff6-4e0a46b72536
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            2b959940b7482671a70eccf65a82841f: !CapsuleColliderShapeDesc
+                                Length: 1.25
+                                LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
+                BasePartId: af649d01-f0ff-47ad-a3b1-01b1665e8f60
+                InstanceId: 66585a12-f234-48b9-b3a3-e9887c2e9d82

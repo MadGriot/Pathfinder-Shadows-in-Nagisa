@@ -1,6 +1,7 @@
 ﻿using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.Physics;
 
 namespace PathfinderShadowsInNagisa
 {
@@ -12,7 +13,7 @@ namespace PathfinderShadowsInNagisa
         public Entity actor;
         public override void Start()
         {
-            // Initialization of the script.
+            targetPosition = actor.Transform.Position;
         }
 
         public override void Update()
@@ -26,22 +27,19 @@ namespace PathfinderShadowsInNagisa
                 actor.Transform.Rotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
 
 
-                float deltaTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
-                actor.Transform.Position += velocity * moveSpeed * deltaTime;
+                actor.Get<CharacterComponent>().SetVelocity(velocity * moveSpeed);
             }
             else
             {
+                actor.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
                 actor.Get<AnimationController>().StopRunning();
             }
 
 
-            if (Input.IsMouseButtonDown(MouseButton.Left))
-            {
-                Move(MouseWorld.Instance.GetPosition());
-            }
+
         }
 
-        private void Move(Vector3 targetPosition)
+        public void Move(Vector3 targetPosition)
         {
             
             this.targetPosition = targetPosition;
