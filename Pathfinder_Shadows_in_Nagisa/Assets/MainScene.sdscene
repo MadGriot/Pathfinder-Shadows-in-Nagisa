@@ -29,6 +29,7 @@ Hierarchy:
                     1c193869c656f6c463cb54f7b4164d9f: !PathfinderShadowsInNagisa.ActorActionSystem,Pathfinder_Shadows_in_Nagisa
                         Id: 682028b5-f471-4f96-b40a-d2e11bca9b31
                         selectedActor: ref!! 8fbdbcea-97e8-4883-923d-63d990b579ca
+                        camera: ref!! 22a8419a-1141-45eb-99e3-81e97e4eb679
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light
