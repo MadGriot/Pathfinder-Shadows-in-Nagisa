@@ -16,4 +16,8 @@
 
     <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2381" IncludeAssets="build;buildTransitive" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PathfinderSecondEdition\PathfinderSecondEdition.csproj" />
+  </ItemGroup>
 </Project>

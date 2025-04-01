@@ -31,6 +31,30 @@ Hierarchy:
                         selectedActor: ref!! 8fbdbcea-97e8-4883-923d-63d990b579ca
                         camera: ref!! 22a8419a-1141-45eb-99e3-81e97e4eb679
         -   Entity:
+                Id: 31f5176d-8e79-410e-a764-aff7f8ed1791
+                Name: ActorSelectionAsset
+                Components:
+                    8ce88c539621f4d72902c4010712c250: !TransformComponent
+                        Id: c22b9772-96c8-478e-a9fd-9e7e4201405b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    de4e9ed1f5248a2ae49f563cb908d698: !ModelComponent
+                        Id: 9632aecc-5ecb-42dc-8a01-f0e52e916f77
+                        Model: c234f3da-b867-4006-b8be-f1cb25c218d5:ActorSelectionAsset
+                        IsShadowCaster: false
+                        Materials: {}
+                    d0e43ea65aec2ef530c95800d8c262d0: !PathfinderShadowsInNagisa.ActorSelectedVisual,Pathfinder_Shadows_in_Nagisa
+                        Id: 3beb6dd4-defc-4b8a-8c49-7ea08abf8aef
+                        actor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
+                        SelectionAsset: ref!! 31f5176d-8e79-410e-a764-aff7f8ed1791
+                        material: e1e01dc3-5b71-4f01-bbce-88056088b882:Glass
+            Base:
+                BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
+                BasePartId: cad7f3b0-ce60-455c-b14a-38946b45745c
+                InstanceId: 199e3301-f59b-433d-b021-6f1d50d77310
+        -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light
                 Components:
@@ -111,6 +135,30 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 8cc4d071-f0ea-4b48-8040-e4024258e61e:Skybox
         -   Entity:
+                Id: b3a366aa-861f-4d8b-9e06-ab33fb8537a3
+                Name: ActorSelectionAsset
+                Components:
+                    8ce88c539621f4d72902c4010712c250: !TransformComponent
+                        Id: f7819a86-d635-4ade-9b06-e4ff81a404f7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    de4e9ed1f5248a2ae49f563cb908d698: !ModelComponent
+                        Id: c5b5465a-2608-4a5c-917e-403345fd41d5
+                        Model: c234f3da-b867-4006-b8be-f1cb25c218d5:ActorSelectionAsset
+                        IsShadowCaster: false
+                        Materials: {}
+                    d0e43ea65aec2ef530c95800d8c262d0: !PathfinderShadowsInNagisa.ActorSelectedVisual,Pathfinder_Shadows_in_Nagisa
+                        Id: 758fe776-9f86-47b8-b9ba-53c66b932cf8
+                        actor: ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
+                        SelectionAsset: ref!! b3a366aa-861f-4d8b-9e06-ab33fb8537a3
+                        material: e1e01dc3-5b71-4f01-bbce-88056088b882:Glass
+            Base:
+                BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
+                BasePartId: cad7f3b0-ce60-455c-b14a-38946b45745c
+                InstanceId: 66585a12-f234-48b9-b3a3-e9887c2e9d82
+        -   Entity:
                 Id: c3c23c93-f116-4296-87ab-29ebbbd0763c
                 Name: Actor
                 Components:
@@ -119,7 +167,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            25016de2649204aa4242209a159174ed: ref!! c22b9772-96c8-478e-a9fd-9e7e4201405b
                     e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
                         Id: 2012a43d-df3f-44ef-aa9c-f77256bf1051
                         Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
@@ -194,7 +243,8 @@ Hierarchy:
                         Position*: {X: 4.0, Y: 0.0, Z: 4.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            e5e79888a2fc4f0dbbeb6d22c0965676: ref!! f7819a86-d635-4ade-9b06-e4ff81a404f7
                     e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
                         Id: b3a0921e-4700-471a-9f3f-805e7466b181
                         Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel

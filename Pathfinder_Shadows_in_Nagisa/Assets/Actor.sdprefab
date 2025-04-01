@@ -15,7 +15,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            54d9cb08d85a6679681edfadde63eec2: ref!! a4f6d9ac-a103-4746-a2a0-73c37d62314c
                     e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
                         Id: bffd953d-338f-4db1-a753-1e29c4abdf0b
                         Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
@@ -48,3 +49,23 @@ Hierarchy:
                                 Length: 1.25
                                 LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: cad7f3b0-ce60-455c-b14a-38946b45745c
+                Name: ActorSelectionAsset
+                Components:
+                    8ce88c539621f4d72902c4010712c250: !TransformComponent
+                        Id: a4f6d9ac-a103-4746-a2a0-73c37d62314c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    de4e9ed1f5248a2ae49f563cb908d698: !ModelComponent
+                        Id: 31106272-2991-4165-b510-597a44b11d95
+                        Model: c234f3da-b867-4006-b8be-f1cb25c218d5:ActorSelectionAsset
+                        IsShadowCaster: false
+                        Materials: {}
+                    d0e43ea65aec2ef530c95800d8c262d0: !PathfinderShadowsInNagisa.ActorSelectedVisual,Pathfinder_Shadows_in_Nagisa
+                        Id: 51722126-c26b-47a5-b62d-411603a370c5
+                        actor: ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
+                        SelectionAsset: ref!! cad7f3b0-ce60-455c-b14a-38946b45745c
+                        material: e1e01dc3-5b71-4f01-bbce-88056088b882:Glass

@@ -1,20 +1,28 @@
 ﻿using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
-using System.Windows.Media.Media3D;
 using Stride.Graphics;
 using Stride.Core.Mathematics;
+using System;
 
 namespace PathfinderShadowsInNagisa
 {
     public class ActorActionSystem : SyncScript
     {
+        public static ActorActionSystem Instance { get; private set; }
+        public event EventHandler OnSelectedActorChanged;
         public Actor selectedActor;
         public CameraComponent camera;
         private Simulation simulation;
         public override void Start()
         {
             simulation = this.GetSimulation();
+            if (Instance != null)
+            {
+                DebugText.Print("Already Exists", new Int2(100, 500));
+            }
+            else 
+                Instance = this;
         }
 
         public override void Update()
@@ -45,12 +53,18 @@ namespace PathfinderShadowsInNagisa
 
                 if (actor != null)
                 {
-                    selectedActor = actor;
+                    SetSelectedActor(actor);
                     return true;
                 }
             }
             return false;
 
+        }
+
+        private void SetSelectedActor(Actor actor)
+        {
+            selectedActor = actor;
+            OnSelectedActorChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }
