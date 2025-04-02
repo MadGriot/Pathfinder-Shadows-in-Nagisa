@@ -68,4 +68,5 @@ Hierarchy:
                         Id: 51722126-c26b-47a5-b62d-411603a370c5
                         actor: ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
                         SelectionAsset: ref!! cad7f3b0-ce60-455c-b14a-38946b45745c
+                        blankMaterial: a4d8aee4-6fca-4883-a62f-2750ef56ecfc:BlankMaterial
                         material: e1e01dc3-5b71-4f01-bbce-88056088b882:Glass

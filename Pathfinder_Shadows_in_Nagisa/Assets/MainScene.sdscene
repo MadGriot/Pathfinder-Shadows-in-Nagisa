@@ -49,6 +49,7 @@ Hierarchy:
                         Id: 3beb6dd4-defc-4b8a-8c49-7ea08abf8aef
                         actor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
                         SelectionAsset: ref!! 31f5176d-8e79-410e-a764-aff7f8ed1791
+                        blankMaterial: a4d8aee4-6fca-4883-a62f-2750ef56ecfc:BlankMaterial
                         material: e1e01dc3-5b71-4f01-bbce-88056088b882:Glass
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
@@ -153,6 +154,7 @@ Hierarchy:
                         Id: 758fe776-9f86-47b8-b9ba-53c66b932cf8
                         actor: ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
                         SelectionAsset: ref!! b3a366aa-861f-4d8b-9e06-ab33fb8537a3
+                        blankMaterial: a4d8aee4-6fca-4883-a62f-2750ef56ecfc:BlankMaterial
                         material: e1e01dc3-5b71-4f01-bbce-88056088b882:Glass
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor

@@ -8,6 +8,7 @@ namespace PathfinderShadowsInNagisa
     {
         public Entity actor;
         public Entity SelectionAsset;
+        public Material blankMaterial;
         public Material material;
 
         public override void Start()
@@ -32,12 +33,14 @@ namespace PathfinderShadowsInNagisa
         {
             if (ActorActionSystem.Instance.selectedActor == actor.Get<Actor>())
             {
-                SelectionAsset.Get<ModelComponent>().Materials.Clear();
+                SelectionAsset.Get<ModelComponent>().Materials.Remove(0);
+                SelectionAsset.Get<ModelComponent>().Materials.Add(0, material);
 
             }
             else
             {
                 SelectionAsset.Get<ModelComponent>().Materials.Remove(0);
+                SelectionAsset.Get<ModelComponent>().Materials.Add(0, blankMaterial);
             }
         }
     }
