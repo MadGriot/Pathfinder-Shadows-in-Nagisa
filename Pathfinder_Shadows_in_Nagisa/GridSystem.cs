@@ -1,4 +1,5 @@
 ﻿using Stride.Core.Mathematics;
+using Stride.Engine;
 using System;
 
 namespace PathfinderShadowsInNagisa
@@ -8,17 +9,20 @@ namespace PathfinderShadowsInNagisa
         private int width;
         private int length;
         private float cellSize;
+        private GridObject[,] gridObjectArray;
         public GridSystem(int width, int length, float cellSize)
         {
             this.width = width;
             this.length = length;
             this.cellSize = cellSize;
 
+            gridObjectArray = new GridObject[width, length];
             for (int x = 0; x < width; x++)
             {
                 for (int z = 0; z < length; z++)
                 {
-
+                    GridPosition gridPosition = new GridPosition(x, z);
+                    gridObjectArray[x,z] = new GridObject(this, gridPosition);
                 }
             }
         }
@@ -34,6 +38,19 @@ namespace PathfinderShadowsInNagisa
                 Convert.ToInt32(worldPosition.X / cellSize),
                 Convert.ToInt32(worldPosition.Z / cellSize)
                 );
+        }
+
+        public void CreateDebugObjects(Entity debugObject)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                for (int z = 0; z < length; z++)
+                {
+                    Entity clone = debugObject.Clone();
+                    clone.Transform.Position = GetWorldPosition(x, z);
+                    debugObject.Scene.Entities.Add(clone);
+                }
+            }
         }
     }
 

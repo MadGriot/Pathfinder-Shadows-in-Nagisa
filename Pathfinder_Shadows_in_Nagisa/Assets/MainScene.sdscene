@@ -14,6 +14,8 @@ Hierarchy:
         - ref!! 017adcc8-946f-4ec9-9ecd-d045106e4066
         - ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
         - ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
+        - ref!! 02cd2675-303d-47ef-8c46-930085334a7e
+        - ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
     Parts:
         -   Folder: Code
             Entity:
@@ -30,6 +32,20 @@ Hierarchy:
                         Id: 682028b5-f471-4f96-b40a-d2e11bca9b31
                         selectedActor: ref!! 8fbdbcea-97e8-4883-923d-63d990b579ca
                         camera: ref!! 22a8419a-1141-45eb-99e3-81e97e4eb679
+        -   Folder: Code
+            Entity:
+                Id: 02cd2675-303d-47ef-8c46-930085334a7e
+                Name: Testing
+                Components:
+                    53284a500d785634dc06ac9729581986: !TransformComponent
+                        Id: a5addb96-92ad-45a7-897c-fb365ba19aaa
+                        Position: {X: 0.0, Y: -1.0254205, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23cc004a4014831e1f4b00dd339810ef: !PathfinderShadowsInNagisa.Testing,Pathfinder_Shadows_in_Nagisa
+                        Id: d8fcbd89-92bf-4415-8aa6-0512e3719fa3
+                        GridDebugObject: ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
         -   Entity:
                 Id: 31f5176d-8e79-410e-a764-aff7f8ed1791
                 Name: ActorSelectionAsset
@@ -86,7 +102,7 @@ Hierarchy:
                 Components:
                     3e5d3acd5cf89287ab67b47d5cf84cc4: !TransformComponent
                         Id: 6d78cbdb-b88c-4378-a4be-0bc263b11fcd
-                        Position: {X: 2.6, Y: 5.887974, Z: -5.915843}
+                        Position: {X: 2.6, Y: 5.887974, Z: -4.715337}
                         Rotation: {X: 0.000121079385, Y: 0.9467511, Z: 0.3158067, W: 0.06267506}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -213,7 +229,7 @@ Hierarchy:
                 Components:
                     8e1e356bb48903c24eb2c94bac98eb8c: !TransformComponent
                         Id: 9ef336d4-caef-438f-9eee-845e5a40df5a
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 9.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
@@ -236,6 +252,20 @@ Hierarchy:
                             2d13340a5ba11916750da5660f2e064c: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
+        -   Entity:
+                Id: f9060525-9b5f-4128-9f70-e4967fa9015a
+                Name: DebugEntity
+                Components:
+                    de6c4776c2cc5f999872adfb5bfd2b81: !TransformComponent
+                        Id: 9c436baa-a14e-440a-9144-1f17b0d17bcd
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    84327b3bce3d936cfe882ef4fa1ec069: !ModelComponent
+                        Id: 46d62ea6-eb82-46cd-ba5f-6925fc9cd784
+                        Model: 43497f30-bb62-46d4-8a9c-6dedead0cad8:Models/CoinGold
+                        Materials: {}
         -   Entity:
                 Id: fe41f41c-76b6-4a81-9de5-743421fcabf0
                 Name: Actor
