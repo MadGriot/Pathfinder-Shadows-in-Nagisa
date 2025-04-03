@@ -16,6 +16,7 @@ Hierarchy:
         - ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
         - ref!! 02cd2675-303d-47ef-8c46-930085334a7e
         - ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
+        - ref!! 218060cf-9dbd-4409-9b08-b3ebd41728bb
     Parts:
         -   Folder: Code
             Entity:
@@ -39,13 +40,26 @@ Hierarchy:
                 Components:
                     53284a500d785634dc06ac9729581986: !TransformComponent
                         Id: a5addb96-92ad-45a7-897c-fb365ba19aaa
-                        Position: {X: 0.0, Y: -1.0254205, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     23cc004a4014831e1f4b00dd339810ef: !PathfinderShadowsInNagisa.Testing,Pathfinder_Shadows_in_Nagisa
                         Id: d8fcbd89-92bf-4415-8aa6-0512e3719fa3
-                        GridDebugObject: ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
+        -   Folder: Code
+            Entity:
+                Id: 218060cf-9dbd-4409-9b08-b3ebd41728bb
+                Name: LevelGrid
+                Components:
+                    ee6817ccb7ed0198ecb28c933c020d96: !TransformComponent
+                        Id: d7d396ab-e25e-4be0-8694-418084cef571
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5194f9ca888ac3fdb2bc4bbf03174a1e: !PathfinderShadowsInNagisa.LevelGrid,Pathfinder_Shadows_in_Nagisa
+                        Id: d7e24251-c7c2-4c6a-a38b-ba1c2bf25b74
+                        GridDebugObject: null
         -   Entity:
                 Id: 31f5176d-8e79-410e-a764-aff7f8ed1791
                 Name: ActorSelectionAsset

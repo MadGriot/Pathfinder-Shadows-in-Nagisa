@@ -14,6 +14,8 @@ namespace PathfinderShadowsInNagisa
         public override void Start()
         {
             targetPosition = actor.Transform.Position;
+            GridPosition gridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
+            LevelGrid.Instance.SetActorAtGridPosition(gridPosition, this);
         }
 
         public override void Update()

@@ -40,6 +40,10 @@ namespace PathfinderShadowsInNagisa
                 );
         }
 
+        public GridObject GetGridObject(GridPosition gridPosition)
+        {
+            return gridObjectArray[gridPosition.x, gridPosition.z];
+        }
         public void CreateDebugObjects(Entity debugObject)
         {
             for (int x = 0; x < width; x++)
