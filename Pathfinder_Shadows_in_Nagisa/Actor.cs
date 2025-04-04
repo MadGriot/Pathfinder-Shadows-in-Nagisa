@@ -10,12 +10,13 @@ namespace PathfinderShadowsInNagisa
         // Declared public member fields and properties will show in the game studio
         private Vector3 targetPosition;
         private Vector3 currentPosition;
+        private GridPosition gridPosition;
         public Entity actor;
         public override void Start()
         {
             targetPosition = actor.Transform.Position;
-            GridPosition gridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
-            LevelGrid.Instance.SetActorAtGridPosition(gridPosition, this);
+            gridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
+            LevelGrid.Instance.AddActorAtGridPosition(gridPosition, this);
         }
 
         public override void Update()
@@ -39,7 +40,12 @@ namespace PathfinderShadowsInNagisa
                 actor.Get<AnimationController>().StopRunning();
             }
 
-
+            GridPosition newGridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
+            if (newGridPosition != gridPosition)
+            {
+                LevelGrid.Instance.ActorMovedGridPosition(this, gridPosition, newGridPosition);
+                gridPosition = newGridPosition;
+            }
 
         }
 

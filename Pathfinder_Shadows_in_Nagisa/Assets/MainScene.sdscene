@@ -59,7 +59,8 @@ Hierarchy:
                         Children: {}
                     5194f9ca888ac3fdb2bc4bbf03174a1e: !PathfinderShadowsInNagisa.LevelGrid,Pathfinder_Shadows_in_Nagisa
                         Id: d7e24251-c7c2-4c6a-a38b-ba1c2bf25b74
-                        GridDebugObject: null
+                        Priority: -1
+                        GridDebugObject: ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
         -   Entity:
                 Id: 31f5176d-8e79-410e-a764-aff7f8ed1791
                 Name: ActorSelectionAsset

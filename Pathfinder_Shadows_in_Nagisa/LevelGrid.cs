@@ -37,22 +37,29 @@ namespace PathfinderShadowsInNagisa
             // Do stuff every new frame
         }
 
-        public void SetActorAtGridPosition(GridPosition gridPosition, Actor actor)
+        public void AddActorAtGridPosition(GridPosition gridPosition, Actor actor)
         {
             GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-            gridObject.Actor = actor;
+            gridObject.ActorList.Add(actor);
         }
 
-        public Actor GetActorAtGridPosition(GridPosition gridPosition, Actor actor)
+        public List<Actor> GetActorListAtGridPosition(GridPosition gridPosition, Actor actor)
         {
             GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-            return gridObject.Actor;
+            return gridObject.ActorList;
         }
 
-        public void ClearActorAtGridPosition(GridPosition gridPosition, Actor actor)
+        public void RemoveActorAtGridPosition(GridPosition gridPosition, Actor actor)
         {
             GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-            gridObject.Actor = null;
+            gridObject.ActorList.Remove(actor);
+        }
+
+        public void ActorMovedGridPosition(Actor actor, GridPosition fromGridPosition, GridPosition toGridPosition)
+        {
+            RemoveActorAtGridPosition(fromGridPosition, actor);
+
+            AddActorAtGridPosition(toGridPosition, actor);
         }
 
         public GridPosition GetGridPosition(Vector3 worldPosition) => gridSystem.GetGridPosition(worldPosition);
