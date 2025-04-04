@@ -52,11 +52,10 @@ Hierarchy:
                 Components:
                     8ab60e1a0cac15b22bba575579287b44: !TransformComponent
                         Id: 07504a71-f682-4029-ae14-ccaf5c351feb
-                        Position: {X: 0.0, Y: 1.6859778, Z: 0.24901873}
+                        Position: {X: 0.0, Y: 2.023, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            c9a2d2a1c6a98cf5d5e32dc761fbca0b: ref!! 66a6eac2-a264-4019-8ee7-53dc309df707
+                        Children: {}
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
                 BasePartId: b1559ccc-3a3b-4cb5-8a5c-2436fa69c617
@@ -82,11 +81,10 @@ Hierarchy:
                 Components:
                     8ab60e1a0cac15b22bba575579287b44: !TransformComponent
                         Id: 2213d519-a6a0-42b9-9d24-dc0f687decd0
-                        Position: {X: 0.0, Y: 1.6859778, Z: 0.24901873}
+                        Position: {X: 0.0, Y: 2.023, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            a285e128e896083dabba1aee5f3f5dc3: ref!! 0417bb35-c98f-4e5e-bf4f-b39af74cf449
+                        Children: {}
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
                 BasePartId: b1559ccc-3a3b-4cb5-8a5c-2436fa69c617
@@ -115,44 +113,6 @@ Hierarchy:
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
                 BasePartId: cad7f3b0-ce60-455c-b14a-38946b45745c
-                InstanceId: 199e3301-f59b-433d-b021-6f1d50d77310
-        -   Entity:
-                Id: 3b0c91aa-3ef0-42af-9476-39dd0d954d96
-                Name: CharacterCamera
-                Components:
-                    48430ab73f3413c07841027ff8717704: !TransformComponent
-                        Id: 66a6eac2-a264-4019-8ee7-53dc309df707
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    2e3910348bc19eb65b4ac27fb540ef60: !CameraComponent
-                        Id: be8023a0-aaa5-4519-a925-13d24db3ab8c
-                        Name: null
-                        Projection: Perspective
-                        Slot*: 00000000-0000-0000-0000-000000000000
-            Base:
-                BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
-                BasePartId: 8d14237a-a1f2-4d79-83bb-9dd483015244
-                InstanceId: 66585a12-f234-48b9-b3a3-e9887c2e9d82
-        -   Entity:
-                Id: 4578fa5c-6aad-4f6d-8fb4-66c5a7526f95
-                Name: CharacterCamera
-                Components:
-                    48430ab73f3413c07841027ff8717704: !TransformComponent
-                        Id: 0417bb35-c98f-4e5e-bf4f-b39af74cf449
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    2e3910348bc19eb65b4ac27fb540ef60: !CameraComponent
-                        Id: fe14f145-9ee9-4a61-9b84-0e54bc91ac7a
-                        Name: null
-                        Projection: Perspective
-                        Slot*: 70578bf2-07ee-4404-b2e6-f21bf4364f6b
-            Base:
-                BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
-                BasePartId: 8d14237a-a1f2-4d79-83bb-9dd483015244
                 InstanceId: 199e3301-f59b-433d-b021-6f1d50d77310
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
@@ -193,7 +153,7 @@ Hierarchy:
                         Id: 22a8419a-1141-45eb-99e3-81e97e4eb679
                         Name: null
                         Projection: Perspective
-                        Slot: 00000000-0000-0000-0000-000000000000
+                        Slot: 70578bf2-07ee-4404-b2e6-f21bf4364f6b
                     4731121a3cb7b430aa22fe0fbfd40d54: !PathfinderShadowsInNagisa.BasicCameraController,Pathfinder_Shadows_in_Nagisa
                         Id: 0a67f1c0-2bd5-42b3-b135-164994b39fe3
                         Gamepad: false
@@ -303,10 +263,6 @@ Hierarchy:
                                 Length: 1.25
                                 LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ac106c1bd410eb2b53e64407fd0dfe71: !PathfinderShadowsInNagisa.FirstPersonCameraController,Pathfinder_Shadows_in_Nagisa
-                        Id: 3848d054-df86-403f-9af3-10f5428e4dfc
-                        MouseSpeed: 0.5
-                        Actor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
                 BasePartId: af649d01-f0ff-47ad-a3b1-01b1665e8f60
@@ -398,10 +354,6 @@ Hierarchy:
                                 Length: 1.25
                                 LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    ac106c1bd410eb2b53e64407fd0dfe71: !PathfinderShadowsInNagisa.FirstPersonCameraController,Pathfinder_Shadows_in_Nagisa
-                        Id: 9f0be1bb-d9d5-414e-a362-c7835deb91af
-                        MouseSpeed: 0.5
-                        Actor: ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
             Base:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
                 BasePartId: af649d01-f0ff-47ad-a3b1-01b1665e8f60
