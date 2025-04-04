@@ -7,6 +7,21 @@ Hierarchy:
         - ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
     Parts:
         -   Entity:
+                Id: 8d14237a-a1f2-4d79-83bb-9dd483015244
+                Name: CharacterCamera
+                Components:
+                    48430ab73f3413c07841027ff8717704: !TransformComponent
+                        Id: 6bfa2af3-acf3-4b1f-b220-729b1dbb72d2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2e3910348bc19eb65b4ac27fb540ef60: !CameraComponent
+                        Id: ea801d27-d7a2-43c6-9583-63141fc010ed
+                        Name: null
+                        Projection: Perspective
+                        Slot: 00000000-0000-0000-0000-000000000000
+        -   Entity:
                 Id: af649d01-f0ff-47ad-a3b1-01b1665e8f60
                 Name: Actor
                 Components:
@@ -17,6 +32,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             54d9cb08d85a6679681edfadde63eec2: ref!! a4f6d9ac-a103-4746-a2a0-73c37d62314c
+                            f1c93f3a07e2312059cddccbe2ed80f6: ref!! 188483f5-2a25-48ed-8247-ed6dfce27ac8
                     e1ae039ade0c4c3d5c524561752f62b8: !ModelComponent
                         Id: bffd953d-338f-4db1-a753-1e29c4abdf0b
                         Model: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
@@ -49,6 +65,21 @@ Hierarchy:
                                 Length: 1.25
                                 LocalOffset: {X: 0.0, Y: 0.8, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    ac106c1bd410eb2b53e64407fd0dfe71: !PathfinderShadowsInNagisa.FirstPersonCameraController,Pathfinder_Shadows_in_Nagisa
+                        Id: d1b57f7d-38b3-4a4b-8f96-1d84afda0d5e
+                        MouseSpeed: 0.5
+                        Actor: ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
+        -   Entity:
+                Id: b1559ccc-3a3b-4cb5-8a5c-2436fa69c617
+                Name: Pivot
+                Components:
+                    8ab60e1a0cac15b22bba575579287b44: !TransformComponent
+                        Id: 188483f5-2a25-48ed-8247-ed6dfce27ac8
+                        Position: {X: 0.0, Y: 1.6859778, Z: 0.24901873}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            770bf2b1248e4f20c1c010ecfd35a0fc: ref!! 6bfa2af3-acf3-4b1f-b220-729b1dbb72d2
         -   Entity:
                 Id: cad7f3b0-ce60-455c-b14a-38946b45745c
                 Name: ActorSelectionAsset
