@@ -7,9 +7,6 @@ Cameras:
     de2e75c3b2b23e54162686363f3f138e:
         Id: 70578bf2-07ee-4404-b2e6-f21bf4364f6b
         Name: Main
-    e03a7a7f65f1d17e1d4a3c660b9615b0*:
-        Id: d141090c-a62c-45b2-a60c-da246bc02928
-        Name: CharacterSlot
 RenderStages:
     47116750c1a5d449b4ad3625f71439b3:
         Id: e2aec0c1-0c8d-40d2-87f9-72dc776052ad
