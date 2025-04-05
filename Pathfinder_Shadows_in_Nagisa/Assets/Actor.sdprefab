@@ -36,6 +36,7 @@ Hierarchy:
                         CharacterSheetId: 0
                     73105d8841d43718083454624ad77754: !CharacterComponent
                         Id: 4ec1fe3e-7554-47e9-96e0-f3ce9ba13867
+                        CollisionGroup: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5

@@ -14,6 +14,7 @@ namespace PathfinderShadowsInNagisa
         public Entity selectedActor;
         public CameraComponent camera;
         private Simulation simulation;
+        public CollisionFilterGroupFlags CollideWidth;
         public override void Start()
         {
             simulation = this.GetSimulation();
@@ -45,17 +46,12 @@ namespace PathfinderShadowsInNagisa
             Vector3 farPosition = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 1.0f),
             camera.ProjectionMatrix, camera.ViewMatrix, Matrix.Identity);
 
-            HitResult hitResult = simulation.Raycast(nearPosition, farPosition);
-
-            if (hitResult.Succeeded)
+            if (simulation.Raycast(nearPosition, farPosition,
+                out HitResult hitResult, CollisionFilterGroups.CharacterFilter, CollideWidth, false, EFlags.None))
             {
                 Entity actor = hitResult.Collider.Entity;
-
-                if (actor != null)
-                {
-                    SetSelectedActor(actor);
-                    return true;
-                }
+                SetSelectedActor(actor);
+                return true;
             }
             return false;
 

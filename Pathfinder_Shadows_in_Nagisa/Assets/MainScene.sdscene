@@ -31,8 +31,9 @@ Hierarchy:
                         Children: {}
                     1c193869c656f6c463cb54f7b4164d9f: !PathfinderShadowsInNagisa.ActorActionSystem,Pathfinder_Shadows_in_Nagisa
                         Id: 682028b5-f471-4f96-b40a-d2e11bca9b31
-                        selectedActor: ref!! 8fbdbcea-97e8-4883-923d-63d990b579ca
+                        selectedActor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
                         camera: ref!! 22a8419a-1141-45eb-99e3-81e97e4eb679
+                        CollideWidth: CharacterFilter
         -   Folder: Code
             Entity:
                 Id: 02cd2675-303d-47ef-8c46-930085334a7e
@@ -244,11 +245,12 @@ Hierarchy:
                         Id: 61ea9496-c9bf-4d96-ae67-07b9130ef65e
                         AnimationSpeed: 1.0
                     cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
-                        Id: 8fbdbcea-97e8-4883-923d-63d990b579ca
+                        Id: dec74bcb-3004-41c5-a07c-a3d97cf9489c
                         actor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
                         CharacterSheetId*: 1
                     73105d8841d43718083454624ad77754: !CharacterComponent
                         Id: 9d40b591-0aaf-4f5f-8cf5-9cc6ae495f85
+                        CollisionGroup: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -341,6 +343,7 @@ Hierarchy:
                         CharacterSheetId*: 2
                     73105d8841d43718083454624ad77754: !CharacterComponent
                         Id: 1cf3054a-30e7-4e5c-9ff6-4e0a46b72536
+                        CollisionGroup*: CharacterFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5

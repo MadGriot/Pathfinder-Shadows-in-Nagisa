@@ -16,15 +16,15 @@ namespace PathfinderShadowsInNagisa
         public int CharacterSheetId;
         public override void Start()
         {
-            CharacterSheet = new CharacterSheet(CharacterSheetId);
-            ActionComponentToEntity.AddComponent(CharacterSheet.PathfinderActions, actor);
+
             gridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
             LevelGrid.Instance.AddActorAtGridPosition(gridPosition, this);
+            CharacterSheet = new CharacterSheet(CharacterSheetId);
+            ActionComponentToEntity.AddComponent(CharacterSheet.PathfinderActions, actor);
         }
 
         public override void Update()
         {
-            DebugText.Print($"{actor.Get<StrideAction>().Name}", new Int2(555, 666));
             GridPosition newGridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
             if (newGridPosition != gridPosition)
             {

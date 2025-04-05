@@ -2,6 +2,7 @@
 using Stride.Engine;
 using Stride.Physics;
 using Stride.Core.Mathematics;
+using System;
 
 namespace PathfinderShadowsInNagisa
 {
@@ -27,7 +28,8 @@ namespace PathfinderShadowsInNagisa
 
             if (Vector3.Distance(currentPosition, targetPosition) > stoppingDistance)
             {
-                DebugText.Print($"Moving", new Int2(200, 300));
+                DebugText.Print($"{Actor.Get<StrideAction>().Name} Action Activated", new Int2(200, 300));
+
                 Vector3 velocity = Vector3.Normalize(targetPosition - currentPosition);
                 float moveSpeed = 4f;
                 Quaternion targetRotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
