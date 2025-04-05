@@ -246,6 +246,7 @@ Hierarchy:
                     cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
                         Id: 8fbdbcea-97e8-4883-923d-63d990b579ca
                         actor: ref!! c3c23c93-f116-4296-87ab-29ebbbd0763c
+                        CharacterSheetId*: 1
                     73105d8841d43718083454624ad77754: !CharacterComponent
                         Id: 9d40b591-0aaf-4f5f-8cf5-9cc6ae495f85
                         CanSleep: false
@@ -337,6 +338,7 @@ Hierarchy:
                     cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
                         Id: c8781457-c170-4d9a-8131-e1bdeb007caf
                         actor: ref!! fe41f41c-76b6-4a81-9de5-743421fcabf0
+                        CharacterSheetId*: 2
                     73105d8841d43718083454624ad77754: !CharacterComponent
                         Id: 1cf3054a-30e7-4e5c-9ff6-4e0a46b72536
                         CanSleep: false

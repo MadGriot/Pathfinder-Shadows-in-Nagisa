@@ -11,7 +11,7 @@ namespace PathfinderShadowsInNagisa
     {
         public static ActorActionSystem Instance { get; private set; }
         public event EventHandler OnSelectedActorChanged;
-        public Actor selectedActor;
+        public Entity selectedActor;
         public CameraComponent camera;
         private Simulation simulation;
         public override void Start()
@@ -30,7 +30,7 @@ namespace PathfinderShadowsInNagisa
             if (Input.IsMouseButtonDown(MouseButton.Left))
             {
                 if (HandleActorSelection()) return;
-                selectedActor.Move(MouseWorld.Instance.GetPosition());
+                selectedActor.Get<StrideAction>().Move(MouseWorld.Instance.GetPosition());
             }
         }
 
@@ -49,7 +49,7 @@ namespace PathfinderShadowsInNagisa
 
             if (hitResult.Succeeded)
             {
-                Actor actor = hitResult.Collider.Entity.Get<Actor>();
+                Entity actor = hitResult.Collider.Entity;
 
                 if (actor != null)
                 {
@@ -61,7 +61,7 @@ namespace PathfinderShadowsInNagisa
 
         }
 
-        private void SetSelectedActor(Actor actor)
+        private void SetSelectedActor(Entity actor)
         {
             selectedActor = actor;
             OnSelectedActorChanged?.Invoke(this, EventArgs.Empty);

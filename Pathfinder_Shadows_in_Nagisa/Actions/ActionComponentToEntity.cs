@@ -1,7 +1,9 @@
 ﻿
+using PathfinderSecondEdition.Actions;
 using Stride.Engine;
+using System.Collections.Generic;
 
-namespace PathfinderSecondEdition.Actions
+namespace PathfinderShadowsInNagisa
 {
     public static class ActionComponentToEntity
     {

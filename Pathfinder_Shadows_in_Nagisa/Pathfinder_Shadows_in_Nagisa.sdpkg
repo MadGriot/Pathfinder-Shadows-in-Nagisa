@@ -9,10 +9,11 @@ Meta:
 AssetFolders:
     -   Path: !dir Assets
     -   Path: !dir Effects
-    -   Path: !dir ../../../../Documents/Stride Projects/Pathfinder Shadows in Nagisa/Pathfinder_Shadows_in_Nagisa/Assets
+    -   Path: !dir ../../Pathfinder Shadows in Nagisa/Pathfinder_Shadows_in_Nagisa/Assets
+    -   Path: !dir ../../../../Desktop/Test/Pathfinder-Shadows-in-Nagisa/Pathfinder_Shadows_in_Nagisa/Assets
     -   Path: !dir Assets
     -   Path: !dir Assets
-    -   Path: !dir C:/Users/Insan/OneDrive/Desktop/Test/Pathfinder-Shadows-in-Nagisa/Pathfinder_Shadows_in_Nagisa/Assets
+    -   Path: !dir C:/Users/Insan/OneDrive/Documents/Stride Projects/Pathfinder-Shadows-in-Nagisa/Pathfinder_Shadows_in_Nagisa/Assets
 ResourceFolders:
     - !dir Resources
 OutputGroupDirectories: {}

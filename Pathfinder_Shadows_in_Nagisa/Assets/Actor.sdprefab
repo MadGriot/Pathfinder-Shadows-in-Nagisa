@@ -33,6 +33,7 @@ Hierarchy:
                     cbcd9912c2a4d3002dcd2e866b3a09c1: !PathfinderShadowsInNagisa.Actor,Pathfinder_Shadows_in_Nagisa
                         Id: 09409238-9aa5-4df4-8d99-50169a4f9712
                         actor: ref!! af649d01-f0ff-47ad-a3b1-01b1665e8f60
+                        CharacterSheetId: 0
                     73105d8841d43718083454624ad77754: !CharacterComponent
                         Id: 4ec1fe3e-7554-47e9-96e0-f3ce9ba13867
                         CanSleep: false

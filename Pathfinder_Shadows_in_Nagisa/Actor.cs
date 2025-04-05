@@ -2,44 +2,29 @@
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
+using PathfinderSecondEdition;
 
 namespace PathfinderShadowsInNagisa
 {
     public class Actor : SyncScript
     {
         // Declared public member fields and properties will show in the game studio
-        private Vector3 targetPosition;
-        private Vector3 currentPosition;
+
         private GridPosition gridPosition;
         public Entity actor;
+        internal CharacterSheet CharacterSheet;
+        public int CharacterSheetId;
         public override void Start()
         {
-            targetPosition = actor.Transform.Position;
+            CharacterSheet = new CharacterSheet(CharacterSheetId);
+            ActionComponentToEntity.AddComponent(CharacterSheet.PathfinderActions, actor);
             gridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
             LevelGrid.Instance.AddActorAtGridPosition(gridPosition, this);
         }
 
         public override void Update()
         {
-            float stoppingDistance = .1f;
-            currentPosition = actor.Transform.Position;
-
-            if (Vector3.Distance(currentPosition, targetPosition) > stoppingDistance)
-            {
-                Vector3 velocity = Vector3.Normalize(targetPosition - currentPosition);
-                float moveSpeed = 4f;
-                Quaternion targetRotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
-                actor.Transform.Rotation = Quaternion.Lerp(actor.Transform.Rotation, targetRotation, 1.0f);
-
-
-                actor.Get<CharacterComponent>().SetVelocity(velocity * moveSpeed);
-            }
-            else
-            {
-                actor.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
-                actor.Get<AnimationController>().StopRunning();
-            }
-
+            DebugText.Print($"{actor.Get<StrideAction>().Name}", new Int2(555, 666));
             GridPosition newGridPosition = LevelGrid.Instance.GetGridPosition(actor.Transform.Position);
             if (newGridPosition != gridPosition)
             {
@@ -49,11 +34,6 @@ namespace PathfinderShadowsInNagisa
 
         }
 
-        public void Move(Vector3 targetPosition)
-        {
-            
-            this.targetPosition = targetPosition;
-            actor.Get<AnimationController>().Run();
-        }
+
     }
 }

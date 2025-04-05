@@ -1,6 +1,6 @@
 ﻿using Stride.Engine;
 
-namespace PathfinderSecondEdition.Actions
+namespace PathfinderShadowsInNagisa
 {
     public abstract class BaseAction : SyncScript
     {

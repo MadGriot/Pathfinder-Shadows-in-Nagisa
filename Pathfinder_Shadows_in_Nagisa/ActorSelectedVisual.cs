@@ -31,7 +31,7 @@ namespace PathfinderShadowsInNagisa
 
         private void UpdateVisual()
         {
-            if (ActorActionSystem.Instance.selectedActor == actor.Get<Actor>())
+            if (ActorActionSystem.Instance.selectedActor == actor)
             {
                 SelectionAsset.Get<ModelComponent>().Materials.Remove(0);
                 SelectionAsset.Get<ModelComponent>().Materials.Add(0, material);
