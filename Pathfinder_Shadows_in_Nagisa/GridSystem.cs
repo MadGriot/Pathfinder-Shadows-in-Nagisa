@@ -6,8 +6,8 @@ namespace PathfinderShadowsInNagisa
 {
     public class GridSystem
     {
-        private int width;
-        private int length;
+        public int width;
+        public int length;
         private float cellSize;
         private GridObject[,] gridObjectArray;
         public GridSystem(int width, int length, float cellSize)
@@ -30,6 +30,11 @@ namespace PathfinderShadowsInNagisa
         public Vector3 GetWorldPosition(GridPosition gridPosition)
         {
             return new Vector3(gridPosition.x, 0, gridPosition.z) * cellSize;
+        }
+
+        public Vector3 GetWorldPositionWithY(GridPosition gridPosition, float y)
+        {
+            return new Vector3(gridPosition.x, y, gridPosition.z) * cellSize;
         }
 
         public GridPosition GetGridPosition(Vector3 worldPosition)

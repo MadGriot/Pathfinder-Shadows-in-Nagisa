@@ -16,7 +16,16 @@ namespace PathfinderShadowsInNagisa
         public override void Start()
         {
             // Initialization of the script.
-            var cell = GridSystemVisualSinglePrefab.Instantiate();
+            for (int x = 0; x < LevelGrid.Instance.GetWidth(); x++)
+            {
+                for (int z = 0; z < LevelGrid.Instance.GetLength(); z++)
+                {
+                    Entity cell = GridSystemVisualSinglePrefab.Instantiate().First();
+                    cell.Transform.Position = LevelGrid.Instance.GetWorldPositionWithY(new GridPosition(x, z), cell.Transform.Position.Y);
+                    Entity.Scene.Entities.Add(cell);
+
+                }
+            }
         }
 
         public override void Update()

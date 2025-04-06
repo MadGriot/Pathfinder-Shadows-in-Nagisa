@@ -19,4 +19,5 @@ Hierarchy:
                     728211e957ef4d8add31f68e9df89247: !ModelComponent
                         Id: bf60b540-2a85-4436-84ce-6efb8daa44e4
                         Model: 14b1d083-0e16-4cd4-80cc-c78413cee98b:Plane
-                        Materials: {}
+                        Materials:
+                            b6fba13503c00bcb42991bad73ec4dc1~0: 450a06c3-40f6-4280-bc0a-70744e35b811:Materials/StoneForGrid

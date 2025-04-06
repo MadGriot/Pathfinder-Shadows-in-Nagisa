@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
 
 namespace PathfinderShadowsInNagisa
@@ -64,8 +59,12 @@ namespace PathfinderShadowsInNagisa
 
         public GridPosition GetGridPosition(Vector3 worldPosition) => gridSystem.GetGridPosition(worldPosition);
         public Vector3 GetWorldPosition(GridPosition gridPosition) => gridSystem.GetWorldPosition(gridPosition);
+        public Vector3 GetWorldPositionWithY(GridPosition gridPosition, float y) => gridSystem.GetWorldPositionWithY(gridPosition, y);
 
         public bool IsValidGridPosition(GridPosition gridPosition) => gridSystem.IsValidGridPosition(gridPosition);
+
+        public int GetWidth() => gridSystem.width;
+        public int GetLength() => gridSystem.length;
         public bool HasAnyActorOnGridPosition(GridPosition gridPosition)
         {
             GridObject gridObject = gridSystem.GetGridObject(gridPosition);
