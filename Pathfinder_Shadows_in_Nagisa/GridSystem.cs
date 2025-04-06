@@ -27,9 +27,9 @@ namespace PathfinderShadowsInNagisa
             }
         }
 
-        public Vector3 GetWorldPosition(int x, int z)
+        public Vector3 GetWorldPosition(GridPosition gridPosition)
         {
-            return new Vector3(x, 0, z) * cellSize;
+            return new Vector3(gridPosition.x, 0, gridPosition.z) * cellSize;
         }
 
         public GridPosition GetGridPosition(Vector3 worldPosition)
@@ -59,7 +59,7 @@ namespace PathfinderShadowsInNagisa
                 for (int z = 0; z < length; z++)
                 {
                     Entity clone = debugObject.Clone();
-                    clone.Transform.Position = GetWorldPosition(x, z);
+                    clone.Transform.Position = GetWorldPosition(new GridPosition(x, z));
                     debugObject.Scene.Entities.Add(clone);
                 }
             }

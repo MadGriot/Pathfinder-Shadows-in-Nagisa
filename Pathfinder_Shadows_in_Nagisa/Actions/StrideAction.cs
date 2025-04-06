@@ -45,13 +45,17 @@ namespace PathfinderShadowsInNagisa
                 Actor.Get<AnimationController>().StopRunning();
             }
         }
-        public void Move(Vector3 targetPosition)
+        public void Move(GridPosition gridPosition)
         {
 
-            this.targetPosition = targetPosition;
+            this.targetPosition = LevelGrid.Instance.GetWorldPosition(gridPosition);
             Actor.Get<AnimationController>().Run();
         }
-
+        public bool IsValidActionGridPosition(GridPosition gridPosition)
+        {
+            List<GridPosition> validGridPositionList = GetValidActionGridPositionList();
+            return validGridPositionList.Contains(gridPosition);
+        }
         public List<GridPosition> GetValidActionGridPositionList()
         {
             List<GridPosition> validGridPositionList = new();
