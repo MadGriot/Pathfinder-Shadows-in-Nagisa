@@ -63,7 +63,12 @@ namespace PathfinderShadowsInNagisa
                 {
                     GridPosition offsetGridPosiiton = new GridPosition(x, z);
                     GridPosition testGridPosition = actorGridPosition + offsetGridPosiiton;
-                    Log.Debug(testGridPosition.ToString());
+
+                    if (!LevelGrid.Instance.IsValidGridPosition(testGridPosition)) continue;
+                    if (actorGridPosition == testGridPosition) continue;
+                    if (LevelGrid.Instance.HasAnyActorOnGridPosition(testGridPosition)) continue;
+
+                    validGridPositionList.Add(testGridPosition);
                 }
             }
 

@@ -44,6 +44,14 @@ namespace PathfinderShadowsInNagisa
         {
             return gridObjectArray[gridPosition.x, gridPosition.z];
         }
+
+        public bool IsValidGridPosition(GridPosition gridPosition)
+        {
+            return gridPosition.x >= 0 &&
+                gridPosition.z >= 0 &&
+                gridPosition.x < width &&
+                gridPosition.z < length;
+        }
         public void CreateDebugObjects(Entity debugObject)
         {
             for (int x = 0; x < width; x++)
