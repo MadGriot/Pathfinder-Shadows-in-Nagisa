@@ -10,7 +10,7 @@ namespace PathfinderShadowsInNagisa
     {
         // Declared public member fields and properties will show in the game studio
 
-        private GridPosition gridPosition;
+        internal GridPosition gridPosition;
         public Entity actor;
         internal CharacterSheet CharacterSheet;
         public int CharacterSheetId;

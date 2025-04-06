@@ -2,7 +2,7 @@
 using Stride.Engine;
 using Stride.Physics;
 using Stride.Core.Mathematics;
-using System;
+using System.Collections.Generic;
 
 namespace PathfinderShadowsInNagisa
 {
@@ -10,6 +10,7 @@ namespace PathfinderShadowsInNagisa
     {
         private Vector3 targetPosition;
         private Vector3 currentPosition;
+        public int MaxMoveDistance = 3;
         public StrideAction() { }
         public StrideAction(Entity actor) : base(actor)
         {
@@ -49,6 +50,24 @@ namespace PathfinderShadowsInNagisa
 
             this.targetPosition = targetPosition;
             Actor.Get<AnimationController>().Run();
+        }
+
+        public List<GridPosition> GetValidActionGridPositionList()
+        {
+            List<GridPosition> validGridPositionList = new();
+
+            GridPosition actorGridPosition = Actor.Get<Actor>().gridPosition;
+            for (int x = -MaxMoveDistance; x <= MaxMoveDistance; x++)
+            {
+                for (int z = -MaxMoveDistance; z <= MaxMoveDistance; z++)
+                {
+                    GridPosition offsetGridPosiiton = new GridPosition(x, z);
+                    GridPosition testGridPosition = actorGridPosition + offsetGridPosiiton;
+                    Log.Debug(testGridPosition.ToString());
+                }
+            }
+
+            return validGridPositionList;
         }
     }
 }
