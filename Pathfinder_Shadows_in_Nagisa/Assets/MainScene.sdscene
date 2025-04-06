@@ -17,6 +17,7 @@ Hierarchy:
         - ref!! 02cd2675-303d-47ef-8c46-930085334a7e
         - ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
         - ref!! 218060cf-9dbd-4409-9b08-b3ebd41728bb
+        - ref!! 49a66b78-b946-4aaa-842e-004f0707085b
     Parts:
         -   Folder: Code
             Entity:
@@ -115,6 +116,20 @@ Hierarchy:
                 BasePartAsset: efe2c04a-d98d-4828-bd86-2fbc37108f75:Actor
                 BasePartId: cad7f3b0-ce60-455c-b14a-38946b45745c
                 InstanceId: 199e3301-f59b-433d-b021-6f1d50d77310
+        -   Folder: Code
+            Entity:
+                Id: 49a66b78-b946-4aaa-842e-004f0707085b
+                Name: GridSystemVisual
+                Components:
+                    9bc643ed9214c41acf7ba4a4af4151b0: !TransformComponent
+                        Id: 2338b5f9-45d4-4126-b1c4-ceb2e9e0389e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c1e64401c846ca81501fba15dca68e07: !PathfinderShadowsInNagisa.GridSystemVisual,Pathfinder_Shadows_in_Nagisa
+                        Id: 4a998727-1950-4bf8-9a31-4bcc37b0ffa6
+                        GridSystemVisualSinglePrefab: 18ddf7f3-5c8b-4b99-aef8-b6b68c110b67:Cell
         -   Entity:
                 Id: 7b069b11-c829-41db-8689-9edcb26fa928
                 Name: Directional light

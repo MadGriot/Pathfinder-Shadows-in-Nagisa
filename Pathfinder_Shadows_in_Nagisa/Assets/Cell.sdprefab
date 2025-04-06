@@ -1,0 +1,22 @@
+!PrefabAsset
+Id: 18ddf7f3-5c8b-4b99-aef8-b6b68c110b67
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 2105d982-b5a8-4c12-bcb3-77a675b7ce22
+    Parts:
+        -   Entity:
+                Id: 2105d982-b5a8-4c12-bcb3-77a675b7ce22
+                Name: Cell
+                Components:
+                    280a8cf50b375dc1f476cfb9f3556c59: !TransformComponent
+                        Id: 434ec91d-aacb-4b05-98df-c16c1b7d3c76
+                        Position: {X: 0.0, Y: 0.01, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    728211e957ef4d8add31f68e9df89247: !ModelComponent
+                        Id: bf60b540-2a85-4436-84ce-6efb8daa44e4
+                        Model: 14b1d083-0e16-4cd4-80cc-c78413cee98b:Plane
+                        Materials: {}
