@@ -33,11 +33,12 @@ namespace PathfinderShadowsInNagisa
 
                 Vector3 velocity = Vector3.Normalize(targetPosition - currentPosition);
                 float moveSpeed = 4f;
+                Actor.Get<CharacterComponent>().SetVelocity(velocity * moveSpeed);
+
                 Quaternion targetRotation = Quaternion.LookRotation(velocity, Vector3.UnitY);
                 Actor.Transform.Rotation = Quaternion.Lerp(Actor.Transform.Rotation, targetRotation, 1.0f);
 
 
-                Actor.Get<CharacterComponent>().SetVelocity(velocity * moveSpeed);
             }
             else
             {

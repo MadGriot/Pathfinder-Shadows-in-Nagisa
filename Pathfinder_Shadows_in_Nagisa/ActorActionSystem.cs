@@ -39,6 +39,11 @@ namespace PathfinderShadowsInNagisa
                     selectedActor.Get<StrideAction>().Move(mouseGridPosition);
                 }
             }
+
+            if (Input.IsMouseButtonDown(MouseButton.Right))
+            {
+                selectedActor.Get<StrikeAction>().Spin();
+            }
         }
 
         private bool HandleActorSelection()
