@@ -21,3 +21,8 @@ Hierarchy:
                         Model: 14b1d083-0e16-4cd4-80cc-c78413cee98b:Plane
                         Materials:
                             b6fba13503c00bcb42991bad73ec4dc1~0: 450a06c3-40f6-4280-bc0a-70744e35b811:Materials/StoneForGrid
+                    5b13e95a9d6408d33391def9a14d1fe1: !PathfinderShadowsInNagisa.GridSystemVisualSingle,Pathfinder_Shadows_in_Nagisa
+                        Id: 3727c46c-ce91-4668-a10d-84388a9ca0a0
+                        blankMaterial: a4d8aee4-6fca-4883-a62f-2750ef56ecfc:BlankMaterial
+                        material: 450a06c3-40f6-4280-bc0a-70744e35b811:Materials/StoneForGrid
+                        cell: ref!! 2105d982-b5a8-4c12-bcb3-77a675b7ce22
