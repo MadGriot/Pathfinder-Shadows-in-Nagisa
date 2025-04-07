@@ -30,7 +30,10 @@ namespace PathfinderShadowsInNagisa
 
                 }
             }
-            HideAllGridPositions();
+        }
+        public override void Update()
+        {
+            UpdateGridVisual();
         }
         public void HideAllGridPositions()
         {
@@ -50,9 +53,14 @@ namespace PathfinderShadowsInNagisa
                 gridSystemVisualSingleArray[gridPosition.x, gridPosition.z].Show();
             }
         }
-        public override void Update()
+
+        private void UpdateGridVisual()
         {
-            // Do stuff every new frame
+            HideAllGridPositions();
+            Entity selectedActor = ActorActionSystem.Instance.selectedActor;
+            ShowGridPositionList(
+                selectedActor.Get<StrideAction>().GetValidActionGridPositionList());
         }
+
     }
 }
