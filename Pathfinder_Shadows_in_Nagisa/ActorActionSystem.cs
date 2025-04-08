@@ -42,7 +42,9 @@ namespace PathfinderShadowsInNagisa
 
             if (Input.IsMouseButtonDown(MouseButton.Right))
             {
-                selectedActor.Get<StrikeAction>().Spin();
+                GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorld.Instance.GetPosition());
+
+                selectedActor.Get<StepAction>().Move(mouseGridPosition);
             }
         }
 

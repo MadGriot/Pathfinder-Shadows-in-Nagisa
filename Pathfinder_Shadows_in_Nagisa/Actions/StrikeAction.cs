@@ -7,7 +7,7 @@ namespace PathfinderShadowsInNagisa
 {
     public class StrikeAction : BaseAction
     {
-        private bool startSpinning;
+        private float totalSpinAmount;
         public StrikeAction() { }
         public StrikeAction(Entity actor) : base(actor)
         {
@@ -16,14 +16,16 @@ namespace PathfinderShadowsInNagisa
         }
         public override void Update()
         {
-            if (startSpinning)
-            {
-                float spinAddAmount = 360f * (float)Game.UpdateTime.Elapsed.TotalSeconds;
-                Quaternion currentRotation = Actor.Transform.Rotation;
-                Quaternion rotationDelta = Quaternion.RotationY(spinAddAmount);
+            if (!isActive) return;
+            
+            float spinAddAmount = 360f * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            Quaternion currentRotation = Actor.Transform.Rotation;
+            Quaternion rotationDelta = Quaternion.RotationY(spinAddAmount);
 
-                Actor.Get<CharacterComponent>().Orientation = currentRotation * rotationDelta;
-            }
+            Actor.Get<CharacterComponent>().Orientation = currentRotation * rotationDelta;
+            totalSpinAmount += spinAddAmount;
+            if (totalSpinAmount >= 360f) isActive = false;
+           
         }
 
         public override void Start()
@@ -32,7 +34,8 @@ namespace PathfinderShadowsInNagisa
 
         public void Spin()
         {
-            startSpinning = true;
+            isActive = true;
+            totalSpinAmount = 0f;
         }
     }
 }

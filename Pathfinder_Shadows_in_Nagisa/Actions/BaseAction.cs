@@ -6,6 +6,8 @@ namespace PathfinderShadowsInNagisa
     {
         public Entity Actor { get; set; }
         public string Name { get; protected set; } = "Action";
+        internal bool isActive;
+
 
         public BaseAction()
         {

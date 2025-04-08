@@ -8,8 +8,8 @@ namespace PathfinderShadowsInNagisa
 {
     public class StrideAction : BaseAction
     {
-        private Vector3 targetPosition;
-        private Vector3 currentPosition;
+        protected Vector3 targetPosition;
+        protected Vector3 currentPosition;
         public int MaxMoveDistance = 3;
         public StrideAction() { }
         public StrideAction(Entity actor) : base(actor)
@@ -24,6 +24,8 @@ namespace PathfinderShadowsInNagisa
 
         public override void Update()
         {
+            if (!isActive) return;
+
             float stoppingDistance = .1f;
             currentPosition = Actor.Transform.Position;
 
@@ -44,6 +46,7 @@ namespace PathfinderShadowsInNagisa
             {
                 Actor.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
                 Actor.Get<AnimationController>().StopRunning();
+                isActive = false;
             }
         }
         public void Move(GridPosition gridPosition)
@@ -51,6 +54,7 @@ namespace PathfinderShadowsInNagisa
 
             this.targetPosition = LevelGrid.Instance.GetWorldPosition(gridPosition);
             Actor.Get<AnimationController>().Run();
+            isActive = true;
         }
         public bool IsValidActionGridPosition(GridPosition gridPosition)
         {

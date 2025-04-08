@@ -3,7 +3,7 @@ using Stride.Engine;
 
 namespace PathfinderShadowsInNagisa
 {
-    public class StepAction : BaseAction
+    public class StepAction : StrideAction
     {
         public StepAction() { }
         public StepAction(Entity actor) : base(actor)
@@ -13,7 +13,8 @@ namespace PathfinderShadowsInNagisa
 
         public override void Start()
         {
-
+            targetPosition = Actor.Transform.Position;
+            MaxMoveDistance = 1;
         }
     }
 }
