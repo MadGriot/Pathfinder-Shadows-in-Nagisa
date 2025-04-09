@@ -15,6 +15,8 @@ namespace PathfinderShadowsInNagisa
         public CameraComponent camera;
         private Simulation simulation;
         public CollisionFilterGroupFlags CollideWidth;
+
+        internal bool isBusy { get; set; }
         public override void Start()
         {
             simulation = this.GetSimulation();
@@ -28,6 +30,8 @@ namespace PathfinderShadowsInNagisa
 
         public override void Update()
         {
+            if (isBusy)
+                return;
             if (Input.IsMouseButtonDown(MouseButton.Left))
             {
                 if (HandleActorSelection()) return;
@@ -36,17 +40,22 @@ namespace PathfinderShadowsInNagisa
 
                 if (selectedActor.Get<StrideAction>().IsValidActionGridPosition(mouseGridPosition))
                 {
-                    selectedActor.Get<StrideAction>().Move(mouseGridPosition);
+                    SetBusy();
+                    selectedActor.Get<StrideAction>().Move(mouseGridPosition, ClearBusy);
                 }
             }
 
             if (Input.IsMouseButtonDown(MouseButton.Right))
             {
+                SetBusy();
                 GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorld.Instance.GetPosition());
 
-                selectedActor.Get<StepAction>().Move(mouseGridPosition);
+                selectedActor.Get<StrikeAction>().Spin(ClearBusy);
             }
         }
+
+        private void SetBusy() => isBusy = true;
+        private void ClearBusy() => isBusy = false;
 
         private bool HandleActorSelection()
         {

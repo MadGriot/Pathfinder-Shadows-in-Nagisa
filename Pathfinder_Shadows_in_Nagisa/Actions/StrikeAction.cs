@@ -2,11 +2,13 @@
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
+using System;
 
 namespace PathfinderShadowsInNagisa
 {
     public class StrikeAction : BaseAction
     {
+
         private float totalSpinAmount;
         public StrikeAction() { }
         public StrikeAction(Entity actor) : base(actor)
@@ -24,7 +26,11 @@ namespace PathfinderShadowsInNagisa
 
             Actor.Get<CharacterComponent>().Orientation = currentRotation * rotationDelta;
             totalSpinAmount += spinAddAmount;
-            if (totalSpinAmount >= 360f) isActive = false;
+            if (totalSpinAmount >= 360f)
+            {
+                isActive = false;
+                onActionComplete();
+            };
            
         }
 
@@ -32,8 +38,9 @@ namespace PathfinderShadowsInNagisa
         {
         }
 
-        public void Spin()
+        public void Spin(Action onActionComplete)
         {
+            this.onActionComplete = onActionComplete;
             isActive = true;
             totalSpinAmount = 0f;
         }

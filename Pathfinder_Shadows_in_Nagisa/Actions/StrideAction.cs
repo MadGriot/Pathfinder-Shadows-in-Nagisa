@@ -3,6 +3,7 @@ using Stride.Engine;
 using Stride.Physics;
 using Stride.Core.Mathematics;
 using System.Collections.Generic;
+using System;
 
 namespace PathfinderShadowsInNagisa
 {
@@ -47,11 +48,12 @@ namespace PathfinderShadowsInNagisa
                 Actor.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
                 Actor.Get<AnimationController>().StopRunning();
                 isActive = false;
+                onActionComplete();
             }
         }
-        public void Move(GridPosition gridPosition)
+        public void Move(GridPosition gridPosition, Action onActionComplete)
         {
-
+            this.onActionComplete = onActionComplete;
             this.targetPosition = LevelGrid.Instance.GetWorldPosition(gridPosition);
             Actor.Get<AnimationController>().Run();
             isActive = true;
