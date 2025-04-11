@@ -1,0 +1,118 @@
+!UIPageAsset
+Id: 7d787ae4-e688-4b74-9200-06e943972fc7
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! 4dababca-96a2-48bb-bada-d8dcc4f47cf7
+    Parts:
+        -   UIElement: !Button
+                Id: 1b3757ce-c346-49ab-a00e-e24e3f4dd8f5
+                DependencyProperties:
+                    f2e5b298fffda7829792625d022b96df~GridBase.RowSpanPropertyKey: 1
+                    c8a828e91a7073f73bcc651982b695bf~GridBase.RowPropertyKey: 0
+                    ab0ee25912418156f3d90b3936304add~GridBase.ColumnSpanPropertyKey: 3
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 281.0
+                Height: 127.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: StrideButton
+                Content: !TextBlock ref!! 75a57cdd-1e69-48e2-ade0-f83657230904
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !Grid
+                Id: 4dababca-96a2-48bb-bada-d8dcc4f47cf7
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    69ba4c844123564afbff5efe5b988d15: !Button ref!! 1b3757ce-c346-49ab-a00e-e24e3f4dd8f5
+                    f5e8c838506284015ca0d2dc42319394: !Button ref!! 7a03abd6-04ae-4fd6-ac81-434b442af931
+                RowDefinitions:
+                    3c94efb44300fbe4d6816d3f4b004634: {}
+                    61014c92d3718a39b4c82333db48a0b1: {}
+                    189658b2a828b241bcbcca730f885a2b: {}
+                    1e20ceec0f62d026a7c8156c5530d234: {}
+                ColumnDefinitions:
+                    bb45cafd34ec6c0c455dbf7dec577086:
+                        MaximumSize: 3.4028235E+38
+                    f2ef60da1fbcbdc4f57465af17f78785: {}
+                    137de27209f40040d5c512d65eda774f: {}
+                LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 74c13661-d998-476a-bcc1-4f046dec8428
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: StrikeButtonText
+                Text: Strike
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                OutlineColor: {R: 0, G: 0, B: 0, A: 255}
+                OutlineThickness: 0.0
+        -   UIElement: !TextBlock
+                Id: 75a57cdd-1e69-48e2-ade0-f83657230904
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: StrideButtonText
+                Text: Stride
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                OutlineColor: {R: 0, G: 0, B: 0, A: 255}
+                OutlineThickness: 0.0
+        -   UIElement: !Button
+                Id: 7a03abd6-04ae-4fd6-ac81-434b442af931
+                DependencyProperties:
+                    eb793b033702feca00fa04b05b3caa3a~GridBase.RowSpanPropertyKey: 1
+                    1d226736236a4d2c2ca1568acaa04f38~GridBase.RowPropertyKey: 1
+                    539a2d7a6a354abb63d49db37dd59d13~GridBase.ColumnPropertyKey: 3
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 277.0
+                Height: 127.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: StrikeButton
+                Content: !TextBlock ref!! 74c13661-d998-476a-bcc1-4f046dec8428
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
