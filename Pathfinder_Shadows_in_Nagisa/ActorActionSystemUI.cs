@@ -22,5 +22,10 @@ namespace PathfinderShadowsInNagisa
         {
             // Do stuff every new frame
         }
+
+        private void CreateActorActionButtons()
+        {
+
+        }
     }
 }
