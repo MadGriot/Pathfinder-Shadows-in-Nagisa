@@ -12,14 +12,14 @@ Hierarchy:
                 Id: 1b3757ce-c346-49ab-a00e-e24e3f4dd8f5
                 DependencyProperties:
                     f2e5b298fffda7829792625d022b96df~GridBase.RowSpanPropertyKey: 1
-                    c8a828e91a7073f73bcc651982b695bf~GridBase.RowPropertyKey: 0
+                    c8a828e91a7073f73bcc651982b695bf~GridBase.RowPropertyKey: 4
                     ab0ee25912418156f3d90b3936304add~GridBase.ColumnSpanPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 DrawLayerNumber: 2
                 Width: 281.0
                 Height: 127.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Top
+                HorizontalAlignment: Center
+                VerticalAlignment: Bottom
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -48,13 +48,14 @@ Hierarchy:
                 RowDefinitions:
                     3c94efb44300fbe4d6816d3f4b004634: {}
                     61014c92d3718a39b4c82333db48a0b1: {}
-                    189658b2a828b241bcbcca730f885a2b: {}
-                    1e20ceec0f62d026a7c8156c5530d234: {}
                 ColumnDefinitions:
                     bb45cafd34ec6c0c455dbf7dec577086:
                         MaximumSize: 3.4028235E+38
                     f2ef60da1fbcbdc4f57465af17f78785: {}
                     137de27209f40040d5c512d65eda774f: {}
+                    af5aeb7eaedf92005bceb5031e027ced: {}
+                    e98bc538956442de26028771bd83e03a: {}
+                    8484d86d9cec76f9938d8af8220ca98b: {}
                 LayerDefinitions: {}
         -   UIElement: !TextBlock
                 Id: 74c13661-d998-476a-bcc1-4f046dec8428
@@ -101,7 +102,7 @@ Hierarchy:
                 Width: 277.0
                 Height: 127.0
                 HorizontalAlignment: Right
-                VerticalAlignment: Top
+                VerticalAlignment: Bottom
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38

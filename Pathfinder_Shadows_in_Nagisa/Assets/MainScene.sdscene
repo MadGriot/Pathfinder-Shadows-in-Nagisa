@@ -18,6 +18,7 @@ Hierarchy:
         - ref!! f9060525-9b5f-4128-9f70-e4967fa9015a
         - ref!! 218060cf-9dbd-4409-9b08-b3ebd41728bb
         - ref!! 49a66b78-b946-4aaa-842e-004f0707085b
+        - ref!! 134c2eb5-3c0f-4869-9788-0b8597e40f32
     Parts:
         -   Folder: Code
             Entity:
@@ -48,6 +49,23 @@ Hierarchy:
                         Children: {}
                     23cc004a4014831e1f4b00dd339810ef: !PathfinderShadowsInNagisa.Testing,Pathfinder_Shadows_in_Nagisa
                         Id: d8fcbd89-92bf-4415-8aa6-0512e3719fa3
+        -   Entity:
+                Id: 134c2eb5-3c0f-4869-9788-0b8597e40f32
+                Name: ActionUI
+                Components:
+                    638b58862df12ee3fb47ce45d8916623: !TransformComponent
+                        Id: d204c14e-136b-45a3-a75b-a717e872513c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d8bcd039e437fd1dbc5b4b78b8ffe07c: !UIComponent
+                        Id: 698b8240-a572-4320-86e3-32003b880425
+                        Page: 7d787ae4-e688-4b74-9200-06e943972fc7:UI/ActionUI
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    f48a9cecafe918ae2fb4d778a2495e95: !PathfinderShadowsInNagisa.ActorActionSystemUI,Pathfinder_Shadows_in_Nagisa
+                        Id: e19f22bb-980d-4b0c-9e92-13608f84e23b
         -   Entity:
                 Id: 20f9781f-0545-4cf4-8aef-16b4d096a28c
                 Name: Pivot
