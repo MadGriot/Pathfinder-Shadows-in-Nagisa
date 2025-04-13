@@ -15,7 +15,9 @@ Hierarchy:
                     c8a828e91a7073f73bcc651982b695bf~GridBase.RowPropertyKey: 4
                     ab0ee25912418156f3d90b3936304add~GridBase.ColumnSpanPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 DrawLayerNumber: 2
+                IsEnabled: false
                 Width: 281.0
                 Height: 127.0
                 HorizontalAlignment: Center
@@ -24,7 +26,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: StrideButton
+                Name: Stride
                 Content: !TextBlock ref!! 75a57cdd-1e69-48e2-ade0-f83657230904
                 PressedImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
@@ -98,7 +100,9 @@ Hierarchy:
                     1d226736236a4d2c2ca1568acaa04f38~GridBase.RowPropertyKey: 1
                     539a2d7a6a354abb63d49db37dd59d13~GridBase.ColumnPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 DrawLayerNumber: 2
+                IsEnabled: false
                 Width: 277.0
                 Height: 127.0
                 HorizontalAlignment: Right
@@ -107,7 +111,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: StrikeButton
+                Name: Strike
                 Content: !TextBlock ref!! 74c13661-d998-476a-bcc1-4f046dec8428
                 PressedImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns

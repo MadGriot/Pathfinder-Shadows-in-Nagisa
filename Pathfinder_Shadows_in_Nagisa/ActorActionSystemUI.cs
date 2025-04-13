@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.UI;
+using Stride.UI.Controls;
 
 namespace PathfinderShadowsInNagisa
 {
     public class ActorActionSystemUI : SyncScript
     {
-        // Declared public member fields and properties will show in the game studio
+        public Entity ActionUI;
+        private List<Button> actionButtons;
 
         public override void Start()
         {
-            // Initialization of the script.
+            CreateActorActionButtons();
+            actionButtons = ActionUI.Get<UIComponent>().Page.RootElement
+                .FindVisualChildrenOfType<Button>().ToList();
         }
 
         public override void Update()
@@ -25,7 +30,9 @@ namespace PathfinderShadowsInNagisa
 
         private void CreateActorActionButtons()
         {
+            Entity actor = ActorActionSystem.Instance.selectedActor;
 
+            List<BaseAction> actions = actor.GetAll<BaseAction>().ToList();
         }
     }
 }

@@ -66,6 +66,7 @@ Hierarchy:
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                     f48a9cecafe918ae2fb4d778a2495e95: !PathfinderShadowsInNagisa.ActorActionSystemUI,Pathfinder_Shadows_in_Nagisa
                         Id: e19f22bb-980d-4b0c-9e92-13608f84e23b
+                        ActionUI: ref!! 134c2eb5-3c0f-4869-9788-0b8597e40f32
         -   Entity:
                 Id: 20f9781f-0545-4cf4-8aef-16b4d096a28c
                 Name: Pivot
