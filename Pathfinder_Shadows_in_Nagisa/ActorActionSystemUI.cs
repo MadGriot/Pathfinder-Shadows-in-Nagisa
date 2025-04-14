@@ -25,7 +25,6 @@ namespace PathfinderShadowsInNagisa
 
         public override void Update()
         {
-            // Do stuff every new frame
         }
 
         private void CreateActorActionButtons()
